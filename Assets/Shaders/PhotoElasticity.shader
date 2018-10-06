@@ -17,7 +17,7 @@
 			float4 vert(appdata_base v) : POSITION{
 			return UnityObjectToClipPos(v.vertex);
 			}
-
+			
 			fixed4 frag(float4 sp:WPOS) : SV_Target{
 			float2 wcoord = sp.xy / _ScreenParams.xy;
 			float vig = clamp(3.0*length(wcoord - 0.5),0.0,1.0);

@@ -51,7 +51,7 @@
 				float4 rgb = float4(0.0, 0.0, 0.0, 1.0);
 
 				for (int index = 0; index<_Samples; index++) {
-					difference = 200 * 3.14 * 72.0 * 0.05 * (eigenvalue - _eigenvalue) / (390.0 + 440.0 / _Samples * index);
+					difference = 200.0 * 3.14 * 72.0 * 0.05 * (eigenvalue - _eigenvalue) / (390.0 + 440.0 / _Samples * index);
 					intensity = _Intensity * pow(sin(difference), 2) * sin2theta;
 					rgb = rgb + 200.0 * intensity * sp2rgb[index * 440.0 / _Samples];
 				}
